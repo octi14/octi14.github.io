@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Pause.gd" type="Script" id=1]
+
+[node name="Pause" type="Popup"]
+pause_mode = 2
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 313.0
+margin_top = 115.0
+margin_right = 816.0
+margin_bottom = 459.0
+color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 491.226
+margin_top = 152.881
+margin_right = 533.226
+margin_bottom = 168.881
+rect_scale = Vector2( 4, 4 )
+text = "Pausa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 502.856
+margin_top = 376.722
+margin_right = 554.856
+margin_bottom = 396.722
+rect_scale = Vector2( 2.5, 2.5 )
+action_mode = 0
+text = "Volver"
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

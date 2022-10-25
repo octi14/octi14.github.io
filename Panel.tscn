@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/arvige.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Panel.gd" type="Script" id=2]
+[ext_resource path="res://buttons/Continuar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/leaguespartan-bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 4 )
+
+[node name="Panel" type="Panel"]
+light_mask = -2147483647
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -690.0
+margin_top = -391.0
+margin_right = 198.0
+margin_bottom = 319.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 887.0
+margin_bottom = 710.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 265.365
+margin_top = 138.213
+margin_right = 545.365
+margin_bottom = 197.213
+rect_scale = Vector2( 1.4, 1.4 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.309804, 0.576471, 0.0392157, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+meta_underlined = false
+tab_size = 3
+text = "¡Muy bien!"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 159.904
+margin_top = 316.156
+margin_right = 358.903
+margin_bottom = 363.156
+rect_scale = Vector2( 3, 3 )
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0.505882, 0.733333, 0.27451, 1 )
+custom_colors/selection_color = Color( 0.270588, 0.160784, 0.160784, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+meta_underlined = false
+tab_size = 0
+text = "   ¡Ayuda a Tas a seguir
+  encontrando monedas!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 97.9779
+margin_top = 562.744
+margin_right = 159.978
+margin_bottom = 591.744
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Volver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continuar" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 527.979
+margin_top = 562.744
+margin_right = 616.979
+margin_bottom = 592.744
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="Continuar" to="." method="_on_Continuar_pressed"]
